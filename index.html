@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop up</title>
+    <style>
+        .container{
+            background-color: rgb(249, 215, 215);
+            width:300px;
+            height:250px;
+           padding :20px;
+            position: absolute;
+            top:20%;
+            left:40%;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .pop{
+            background-color: rgb(240, 236, 236);
+            padding:30px;
+            border-radius: 5px;  
+        }
+        h2{
+            text-align: center;
+           
+        }
+        input{
+            padding:8px;
+            margin-bottom:40px;
+        }
+        #btn{
+            background-color:rgb(153, 239, 153);
+            border:0;
+            height:35px;
+            width:80px;
+            font-size: 16px;
+            box-shadow: 0 0 6px silver ;
+            cursor: pointer;
+        }
+        #btn1{
+            background-color:rgb(153, 239, 153);
+            border:0;
+            height:35px;
+            width:80px;
+            font-size: 16px;
+            box-shadow: 0 0 6px silver ;
+            cursor: pointer;
+        }
+        .popup{
+            background-color: rgb(248, 229, 229);
+            width:30%;
+            height: 300px;
+            border-radius: 10px;
+            position: absolute;
+            top:0;
+            left:35%;
+            text-align: center;
+        
+            visibility: hidden;
+           
+            
+        }
+        img{
+            height:100px;
+            margin-top: -50px;
+        }
+        h1{
+            font-size: 26px;
+        }
+        p{
+            color:rgb(74, 72, 72);
+        }
+        .open-popup{
+            visibility: visible;
+            top:20%;
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+    
+        <h2>Registration Form</h2>
+            <label for="username">Username</label>
+            <input type="text">
+            <label for="password">Password</label>
+            <input type="password">
+            <button id="btn" onclick="main()">Submit</button>
+        </div>
+        </div>
+        <div class="popup" id="pop">
+            <img src="./img1.webp"/>
+            <h1>Thank You!</h1>
+            <p>Your Registration sucessfully completed.</p>
+            <button id="btn1" onclick="main1()">OK</button>
+            
+
+       
+    </div>
+
+
+    <script>
+        let btn=document.getElementById("btn");
+        let btn1=document.getElementById("btn1");
+        let pop=document.getElementById("pop");
+
+    function main(){
+        pop.classList.add("open-popup");
+    }
+
+    function main1(){
+        pop.classList.remove("open-popup");
+    }
+       
+    </script>
+</body>
+</html>
